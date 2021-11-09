@@ -30,7 +30,7 @@
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto;">
                     <li>
-                        <a class="dropdown-item" href="#">My Dashboard</a>
+                        <a class="dropdown-item" href="{{ route('dashboard') }}">My Dashboard</a>
                     </li>
                     <li>
                         <a class="dropdown-item" href="#"
