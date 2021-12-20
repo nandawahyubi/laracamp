@@ -27,6 +27,10 @@ Route::get('/', function () {
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
 
+// Midtrans Route
+Route::get('payment/success', [UserController::class, 'midtransCallback']);
+Route::post('payment/success', [UserController::class, 'midtransCallback']);
+
 // hanya bisa di akses setelah login
 Route::middleware(['auth'])->group(function () {
     // checkout route
