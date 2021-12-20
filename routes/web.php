@@ -37,16 +37,16 @@ Route::middleware(['auth'])->group(function () {
     // dashboard
     Route::get('dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
-    //* user dashboard
+    // user dashboard
     Route::prefix('user/dashboard')->namespace('User')->name('user.')->middleware('ensureUserRole:user')->group(function () {
         Route::get('/', [UserDashboard::class, 'index'])->name('dashboard');
     });
 
-    //* admin dashboard
+    // admin dashboard
     Route::prefix('admin/dashboard')->namespace('Admin')->name('admin.')->middleware('ensureUserRole:admin')->group(function () {
         Route::get('/', [AdminDashboard::class, 'index'])->name('dashboard');
 
-        //* admin checkout
+        // admin checkout
         Route::post('checkout/{checkout}', [AdminCheckout::class, 'update'])->name('checkout.update');
     });
 });
