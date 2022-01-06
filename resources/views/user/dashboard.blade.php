@@ -31,7 +31,7 @@
                             </p>
                         </td>
                         <td>
-                            <strong>${{ $checkout->Camp->price }}</strong>
+                            <strong>{{ $checkout->Camp->price }}k</strong>
                         </td>
                         <td class="text-center">
                             <strong>{{ $checkout->payment_status }}</strong>
