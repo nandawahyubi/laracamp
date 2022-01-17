@@ -10,7 +10,7 @@ use App\Models\Checkout;
 use App\Models\Camp;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\Checkout\AfterCheckout;
-use Str;
+use Illuminate\Support\Str;
 use Midtrans;
 
 class CheckoutController extends Controller
@@ -236,6 +236,6 @@ class CheckoutController extends Controller
         }
 
         $checkout->save();
-        return view('checkout/success');
+        return view('checkout\success');
     }
 }
