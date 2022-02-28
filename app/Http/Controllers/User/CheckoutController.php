@@ -58,7 +58,7 @@ class CheckoutController extends Controller
     public function store(Store $request, Camp $camp)
     {
         // mapping request data
-        $data = request()->all();
+        $data = $request->all();
         $data['user_id'] = Auth::id();
         $data['camp_id'] = $camp->id;
 
@@ -236,6 +236,6 @@ class CheckoutController extends Controller
         }
 
         $checkout->save();
-        return view('checkout/success');
+        return view('checkout.success');
     }
 }
