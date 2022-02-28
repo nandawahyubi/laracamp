@@ -318,10 +318,6 @@ body {
     height: 30px;
 }
 
-.dashboard .table tr {
-    border: 1px solid #fff;
-}
-
 .basic-form input {
     border: 1px solid #e7e5f4;
     border-radius: 50px;
